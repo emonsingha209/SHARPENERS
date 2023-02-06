@@ -22,7 +22,14 @@
 		$conn = getConnection();
 		$sql = "INSERT into admin(Name, Usertype, Email, Password, Address, Division, PostalCode, ContactNumber, Gender, DateOfBirth, BloodGroup, PictureLocation, JoinDate) VALUES ('{$Name}', '{$usertype}', '{$Email}', '{$Password}', '{$Address}', '{$Division}', '{$PostalCode}', '{$ContactNumber}', '{$Gender}', '{$DateOfBirth}', '{$BloodGroup}', '{$PictureLocation}', '{$joiningdate}')";
 		$result = mysqli_query($conn, $sql);
-		return true;
+		if($result === true)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 	function adminData($Email)
 	{

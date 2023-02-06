@@ -1,6 +1,7 @@
 <?php
     $AdminList = true;
     require_once "../../model/adminModel.php";
+    require_once "../../model/Message.php";
     if(isset($_COOKIE['status'])){
         $result = adminGetResult();
 ?>
@@ -14,7 +15,7 @@
 </head>
 <body>
     <div class="container">
-        <h2 id="title">Admins Of SHARPENERS</h2>
+        <h1 id="title">Admins Of SHARPENERS</h1>
         <div class="card-box">
             <?php while($row = mysqli_fetch_assoc($result)) { ?>
             <div class="card">

@@ -100,7 +100,7 @@ body
 {
 	position:fixed;
 	width:20%;
-	margin-top:60px;
+	margin-top:59px;
 	border-right:3px solid #4949a7;
 	height:600px
 }
@@ -146,6 +146,13 @@ body
 	font-size:14px
 }
 
+form
+{
+	width:40vw;
+	min-width:300px;
+	margin: auto;
+}
+
 fieldset
 {
 	background-color:#2196F3;
@@ -161,6 +168,11 @@ input
 	color:#000;
 	font-family:Arial,Helvetica,sans-serif;
 	font-size:medium
+}
+
+input:focus
+{
+	background-color: #e0e0e0;
 }
 
 input,select
@@ -200,7 +212,7 @@ label
 .inline
 {
 	width:auto;
-	margin:0 .5em 0 0;
+	margin: auto;
 	vertical-align:middle
 }
 
@@ -235,21 +247,21 @@ input[type="submit"]:active
 	position:absolute;
 	font-family:sans-serif;
 	background-color:#fff;
+	color:#333;
 	font-size:18px;
 	text-align:center;
 	padding:10px;
 	border-radius:10px;
 	box-shadow:5px 5px 20px #000000;
 	margin:auto;
-	width:400px;
-	top:150px;
+	width: 30vw;
+	top:100px;
 	left:0;
 	right:0
 }
 
 #message,#hmessage
 {
-	color:#333;
 	text-align:center;
 	margin: 10px
 }
@@ -284,7 +296,7 @@ input[type="submit"]:active
 	border:none;
     padding: 10px;
     margin-top: 10px;
-    width: 80%;
+    width: 100%;
     background-color: #f5f501;
     border-radius: 5px;
 }
@@ -311,14 +323,6 @@ input[type="submit"]:active
 {
 	font-style:italic;
 	margin-top:-2px
-}
-
-#reg-form
-{
-	width:60vw;
-	max-width:500px;
-	min-width:300px;
-	margin:0 auto;
 }
 
 #title,#data
@@ -573,4 +577,19 @@ input[type="submit"]:active
 {
 	padding: 5px 10px;
 	font-size: 16px;
+}
+#no-data-show
+{
+	margin: auto;
+	margin-top: 150px;
+	font-size: 48px;
+	background-color: #3e8e41;
+	padding: 10px;
+	width: 60%;
+	text-align: center;
+	display: block;
+}
+#no-data-hide
+{
+	display: none;
 }

@@ -1,3 +1,4 @@
+const errors = document.getElementsByClassName("err");
 class Person
 {
     constructor(name, email, address, division, postalcode, contnum, gender, bg, pic, picValue)
@@ -309,7 +310,6 @@ function AdminReg() {
     let dobErr = document.getElementById('dob-p');
     let bgErr = document.getElementById('bg-p');
     let picErr = document.getElementById('pic-p');
-    const errors = document.getElementsByClassName("err");
 
     const hide = document.querySelectorAll("input, select");
     let l = hide.length;

@@ -87,10 +87,10 @@
 				<input type="submit" value="Sign Up" />
 				<p class = "err" id="warn-p"></p>
 			</fieldset>
-			<footer>
-				<?php require "../footer.php" ?>
-			</footer>
 		</form>
+		<footer>
+			<?php require "../footer.php" ?>
+		</footer>
 	</div>
 	<?php require "AdminMenu.php" ?>
 </body>

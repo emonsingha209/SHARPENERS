@@ -28,7 +28,7 @@
 	<div class = "sidenav" id="sidenav">
 		<nav>
 			<a href="AdminRegistration.php" id="<?php if(isset($addadmin)) { echo "navcc";} ?>" >Add New Admin</a>
-			<a href="AdminList.php" id="<?php if(isset($AdminList)) { echo "navcc";} ?>" >View Admin List</a>
+			<a href="AdminList.php" id="<?php if(isset($AdminList)) { echo "navcc";} ?>" >Admin List</a>
 			<a href="ManagerApplicants.php" id="<?php if(isset($ManagerApplicants)) { echo "navcc";} ?>" >Manager Applicants</a>
 			<a href="AdminManageCourse.php" id="<?php if(isset($course)) { echo "navcc";} ?>" >Manage Course</a>
 			<a href="new.php" id="<?php if(isset($book)) { echo "navcc";} ?>" >Manage Book</a>
