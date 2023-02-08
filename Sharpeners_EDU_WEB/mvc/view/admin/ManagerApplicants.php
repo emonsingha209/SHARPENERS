@@ -31,16 +31,16 @@
             <?php while($row = mysqli_fetch_assoc($result)) { ?>
             <div class="ApplicantsData">
                 <img src="<?php echo $row['PictureLocation'] ?> " alt="user-pic">
-                <p><b>Name: </b><?php echo $row['Name'] ?></p>
-                <p><b>Email: </b><?php echo $row['Email'] ?></p>
-                <p><b>Address: </b><?php echo $row['Address'] ?></p>
-                <p><b>Division: </b><?php echo $row['Division'] ?></p>
-                <p><b>Postal Code: </b><?php echo $row['PostalCode'] ?></p>
-                <p><b>Contact Number: </b><?php echo $row['ContactNumber'] ?></p>
-                <p><b>Gender: </b><?php echo $row['Gender'] ?></p>
-                <p><b>Date Of Birth: </b><?php echo $row['DateOfBirth'] ?></p>
-                <p><b>Blood Group: </b><?php echo $row['BloodGroup'] ?></p>
-                <p><b>Applied for: </b><?php echo $row['Post'] ?></p>
+                <p>Name: <?php echo $row['Name'] ?></p>
+                <p>Email: <?php echo $row['Email'] ?></p>
+                <p>Address: <?php echo $row['Address'] ?></p>
+                <p>Division: <?php echo $row['Division'] ?></p>
+                <p>Postal Code: <?php echo $row['PostalCode'] ?></p>
+                <p>Contact Number: <?php echo $row['ContactNumber'] ?></p>
+                <p>Gender: <?php echo $row['Gender'] ?></p>
+                <p>Date Of Birth: <?php echo $row['DateOfBirth'] ?></p>
+                <p>Blood Group: <?php echo $row['BloodGroup'] ?></p>
+                <p>Applied for: <?php echo $row['Post'] ?></p>
                 <label for="download">Download CV of candidate from this link:<a href="<?php echo $row['CVLocation'] ?>" id="download">Download</a></label>
                 <a href="../../controller/admin/ManagerAssign.php?email=<?php echo $row['Email'] ?>">Assign</a>
                 <a href="../../controller/admin/ManagerReject.php?email=<?php echo $row['Email'] ?>">Reject</a>
