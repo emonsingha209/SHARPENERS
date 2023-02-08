@@ -16,7 +16,5 @@ This is the official website for SHARPENERS, a leading institution dedicated to 
 * If you are a current student, log in to access your course materials and resources.
 * If you are interested in attending [INSERT INSTITUTION NAME HERE], visit the admissions section for information about how to apply.
 ## Support
-
-```
-For any questions or issues, please contact our support team at [emonsingha209@gmail.com].
+For any questions or issues, please contact our support team at emonsingha209@gmail.com.
 We are proud to be a leading institution in education, and we hope that you find our website to be a valuable resource in your academic journey!
