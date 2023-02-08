@@ -6,8 +6,7 @@ This is the official website for SHARPENERS, a leading institution dedicated to 
 * Information about our programs and degrees
 * Online resources for current students, including course materials and assignment submissions
 * Campus events and news updates
-*Information about financial aid and scholarships
-* Admissions information, including application procedures and deadlines
+* Admissions information
 ## Requirements
 * An internet-connected device, such as a computer, tablet, or smartphone
 * A web browser, such as Google Chrome, Mozilla Firefox, or Safari
