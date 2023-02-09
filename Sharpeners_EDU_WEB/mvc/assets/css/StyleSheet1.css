@@ -3,10 +3,10 @@ body
 	width:100%;
 	height:100vh;
 	margin:0;
-	background-color:#1b1b32;
+	background-color:#f2f2f2;
 	font-family:'Poppins',sans-serif;
 	font-size:16px;
-	color:#fff
+	color:#1c1e21
 }
 
 .topnav
@@ -98,11 +98,11 @@ body
 
 .sidenav
 {
+	background-color: #1b1b32;
 	position:fixed;
-	width:20%;
+	width:15%;
 	margin-top:59px;
-	border-right:3px solid #4949a7;
-	height:600px
+	height: 100vh;
 }
 
 .sidenav a:link,a:visited
@@ -112,9 +112,8 @@ body
 	display:block;
 	padding:14px 16px;
 	text-decoration:none;
-	font-size:17px;
+	font-size:16px;
 	margin:10px;
-	text-align:center
 }
 
 .sidenav a:hover,a:active
@@ -125,7 +124,7 @@ body
 .container
 {
 	float:right;
-	width:76%;
+	width:82%;
 	min-height:514px;
 	margin-top:50px;
 	margin-right:20px;
@@ -140,7 +139,7 @@ body
 	left:0;
 	right:0;
 	bottom:0;
-	background-color:#333;
+	background-color:#dac0c0;
 	text-align:center;
 	width:100%;
 	font-size:14px
@@ -157,7 +156,6 @@ fieldset
 {
 	background-color:#2196F3;
 	color:#000;
-	box-shadow:0 0 8px 5px #0000004d;
 	margin-top:20px;
 	border:1px solid #000;
 	padding-right:20px;
@@ -172,7 +170,7 @@ input
 
 input:focus
 {
-	background-color: #e0e0e0;
+	background-color: #f2f2f2;
 }
 
 input,select
@@ -182,7 +180,10 @@ input,select
 	min-height:2em;
 	border:1px solid #1b1bc0
 }
-
+input:hover, select:hover, file:hover
+{
+	cursor: pointer;
+}
 select
 {
 	min-height:2em
@@ -346,9 +347,9 @@ input[type="submit"]:active
 .card-box
 {
 	display:grid;
-	grid-template-columns:auto auto auto;
+	grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
 	gap:20px;
-	background-color:#2196F3;
+	background-color: #1b1b32;
     color:#333;
 	padding:20px
 }
@@ -356,8 +357,9 @@ input[type="submit"]:active
 .card-box .card
 {
 	float:left;
-	background-color:#fff;
-	margin-bottom:30px;
+	background-color:#2196F3;
+	margin: 10px 0;
+	border-radius: 5px;
 	box-shadow:0 0 8px 5px #0000004d
 }
 
@@ -382,19 +384,20 @@ input[type="submit"]:active
 
 #details
 {
-	background-color:#2196F3;
+	background-color:#00356d;
 	color:#fff;
 	display:block;
 	padding:14px 16px;
 	margin:10px;
 	text-decoration:none;
 	font-size:17px;
+	border-radius: 5px;
 	text-align:center
 }
 
 #details:hover
 {
-	background-color:#1a72b9
+	background-color:#032c57
 }
 
 #navcc
@@ -413,9 +416,8 @@ input[type="submit"]:active
 	float:left;
 	font-family:Verdana,Geneva,Tahoma,sans-serif;
 	font-size:x-large;
-	margin-left:30px
+	margin: 50px 100px;
 }
-
 .dataset1 img
 {
 	width:300px;
@@ -425,7 +427,7 @@ input[type="submit"]:active
 
 #camera
 {
-	margin-top:-220px;
+	margin-top:-180px;
 	margin-left:190px;
 	font-size:50px;
 	opacity:70%
@@ -439,10 +441,9 @@ input[type="submit"]:active
 
 .dataset2
 {
-	float:left;
+	float: right;
 	font-family:Verdana,Geneva,Tahoma,sans-serif;
-	margin-left:70px;
-	width:620px;
+	width:550px;
     text-align: left;
 }
 
@@ -476,6 +477,11 @@ input[type="submit"]:active
 	font-size:24px;
 	cursor:pointer;
     margin-top: -40px;
+}
+
+#admin-update-form
+{
+	width: auto;
 }
 
 #addressUpdate,#contUpdate,#basicUpdate
@@ -553,6 +559,15 @@ input[type="submit"]:active
 	border: 1px solid #4949a7;
 	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	box-shadow:0 0 8px 5px #0000004d
+}
+.Applicants .ApplicantsData label
+{
+	font-weight: bold;
+}
+.Applicants .ApplicantsData label, p
+{
+	display: inline-block;
+	margin: 10px 0;
 }
 .Applicants .ApplicantsData img
 {

@@ -31,17 +31,27 @@
             <?php while($row = mysqli_fetch_assoc($result)) { ?>
             <div class="ApplicantsData">
                 <img src="<?php echo $row['PictureLocation'] ?> " alt="user-pic">
-                <p>Name: <?php echo $row['Name'] ?></p>
-                <p>Email: <?php echo $row['Email'] ?></p>
-                <p>Address: <?php echo $row['Address'] ?></p>
-                <p>Division: <?php echo $row['Division'] ?></p>
-                <p>Postal Code: <?php echo $row['PostalCode'] ?></p>
-                <p>Contact Number: <?php echo $row['ContactNumber'] ?></p>
-                <p>Gender: <?php echo $row['Gender'] ?></p>
-                <p>Date Of Birth: <?php echo $row['DateOfBirth'] ?></p>
-                <p>Blood Group: <?php echo $row['BloodGroup'] ?></p>
-                <p>Applied for: <?php echo $row['Post'] ?></p>
-                <label for="download">Download CV of candidate from this link:<a href="<?php echo $row['CVLocation'] ?>" id="download">Download</a></label>
+                <label for="name">Name: </label>
+                <p id="name"><?php echo $row['Name'] ?></p><br>
+                <label for="email">Email: </label>
+                <p id="email"><?php echo $row['Email'] ?></p><br>
+                <label for="address">Address: </label>
+                <p id="address"><?php echo $row['Address'] ?></p><br>
+                <label for="division">Division: </label>
+                <p id="division"><?php echo $row['Division'] ?></p><br>
+                <label for="postcode">Postal Code: </label>
+                <p id="postcode"><?php echo $row['PostalCode'] ?></p><br>
+                <label for="contnum">Contact Number: </label>
+                <p id="contnum"><?php echo $row['ContactNumber'] ?></p><br>
+                <label for="gender">Gender: </label>
+                <p id="gender"><?php echo $row['Gender'] ?></p><br>
+                <label for="dob">Date Of Birth: </label>
+                <p id="dob"><?php echo $row['DateOfBirth'] ?></p><br>
+                <label for="bg">Blood Group: </label>
+                <p id="bg"><?php echo $row['BloodGroup'] ?></p><br>
+                <label for="post">Applied for: </label>
+                <p id="post"><?php echo $row['Post'] ?></p><br>
+                <label for="download">Download CV of candidate from this link: </label><a href="<?php echo $row['CVLocation'] ?>" id="download">Download</a><br>
                 <a href="../../controller/admin/ManagerAssign.php?email=<?php echo $row['Email'] ?>">Assign</a>
                 <a href="../../controller/admin/ManagerReject.php?email=<?php echo $row['Email'] ?>">Reject</a>
             </div>
