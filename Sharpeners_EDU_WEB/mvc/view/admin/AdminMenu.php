@@ -32,7 +32,6 @@
 			<a href="ManagerApplicants.php" id="<?php if(isset($ManagerApplicants)) { echo "navcc";} ?>" >Manager Applicants</a>
 			<a href="AdminManageCourse.php" id="<?php if(isset($course)) { echo "navcc";} ?>" >Manage Course</a>
 			<a href="new.php" id="<?php if(isset($book)) { echo "navcc";} ?>" >Manage Book</a>
-			<a href="ok.php" id="<?php if(isset($cv)) { echo "navcc";} ?>" >View CV</a>
 		</nav>
 	</div>
 </body>
