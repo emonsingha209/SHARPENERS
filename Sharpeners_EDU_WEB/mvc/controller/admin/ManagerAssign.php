@@ -18,6 +18,7 @@
 	$Cv = $data['cv'];
 	$Pic = $data['pic'];
 	$Post = $data['post'];
+	$joiningdate = date("d-M-Y");
 	$Password = rand();
 
 	$error = false;
@@ -31,7 +32,7 @@
 
 	if(!$error)
 	{
-		$status = ManagerReg($Name, $Email, $Address, $Division, $PostalCode, $ContactNumber, $Gender, $DateOfBirth, $BloodGroup, $Cv, $Pic, $Post, $Password);
+		$status = ManagerReg($Name, $Email, $Address, $Division, $PostalCode, $ContactNumber, $Gender, $DateOfBirth, $BloodGroup, $Cv, $Pic, $Post, $Password, $joiningdate);
 		if($status)
 		{
 			$_SESSION['Hmessage'] = "New Manager Assinged Successfully";

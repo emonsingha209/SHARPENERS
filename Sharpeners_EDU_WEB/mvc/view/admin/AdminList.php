@@ -19,15 +19,15 @@
         <div class="card-box">
             <?php while($row = mysqli_fetch_assoc($result)) { ?>
             <div class="card">
-                <img src="<?php echo $row['PictureLocation'] ?> " alt="user-pic">
-                <h4><b><?php echo $row['Name'] ?></b></h4> 
-                <p id="card-email"><?php echo $row['Email'] ?></p>
-                <a href="AdminProfile.php" id="details">Details</a>
+                <img src="<?php echo $row['PictureLocation'] ?>" alt="user-pic"><br>
+                <p id="card-name"><?php echo $row['Name'] ?></p> <br>
+                <p><?php echo $row['Email'] ?></p>
+                <a href="AdminProfile.php?email=<?php echo $row['Email'] ?>" id="details">Details</a>
             </div>
     <?php } ?>
         </div>
         <footer>
-		    <?php require_once "../footer.php" ?>
+		    <?php require_once "../CommonFile/footer.php" ?>
 	    </footer>
     </div>
     <?php require "AdminMenu.php" ?>
@@ -36,6 +36,6 @@
 <?php
 	}
 	else {
-		header('location:../login.php');
+		header('location: ../CommonFile/login.php');
 	}
 ?>

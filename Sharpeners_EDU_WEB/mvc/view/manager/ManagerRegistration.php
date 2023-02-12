@@ -11,6 +11,10 @@
 	<script src="../../assets/js/registration.js"></script>
 </head>
 <body>
+	<div class="heading">
+		<h1 id="title">MANAGER APPLICATION FORM</h1>
+		<p id="data">Please fill up this form with right information</p>
+	</div>
 	<div class = "ApplicationForm">
 		<div class = "popup" id = "<?php Condition()?>">
 			<img src="../../assets/logo/ok_icon.png" alt="ok" id="<?php OkIcon() ?>" class="iconPopup">
@@ -19,8 +23,6 @@
 			<p id = "message" ><?php ShowMessage() ?></p>
 			<button type="button" id = "close-btn" onclick="ClosePopup()">OK</button>
 		</div>
-		<h1 id="title">MANAGER APPLICATION FORM</h1>
-		<p id="data">Please fill up this form with right information</p>
 		<form id="reg-form" method="post" action="../../controller/Manager/ApplicantsManagerCheck.php" autocomplete = "off" onsubmit="return ManagerReg()" enctype="multipart/form-data" >
 			<fieldset>
 				<label id="name-label">Name<input type="text" id = "name" name="name" placeholder="Enter Your Name" ></label>
@@ -87,7 +89,7 @@
 			</fieldset>
 		</form>
         <div class="checkstatus">
-            <p>Already Applied?</p>
+            <p>Already Applied?</p><br>
             <a href="AdminRegistration.php" id="checkstatus">Check Status Here</a>
             <br>
         </div>

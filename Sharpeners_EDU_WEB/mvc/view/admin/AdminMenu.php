@@ -16,7 +16,7 @@
 			<h3><a href="Admin.php" id="logo" >SHARPENERS</a></h3>
 		</div>
 		<div class="username">
-			<a href="AdminProfile.php" id="user-name" ><img src=<?php echo $_SESSION['pic'] ?>><?php echo $_SESSION['user'] ?></a>
+			<a href="AdminOwnProfile.php" id="user-name" ><img src="<?php echo $_SESSION['pic'] ?>"><?php echo $_SESSION['user'] ?></a>
 		</div>
 		<div class="changepass">
 			<a href="changepass.php" id="cpass-btn">Change Password</a>
@@ -39,6 +39,6 @@
 <?php
 	}
 	else {
-		header('location:../login.php');
+		header('location: ../CommonFile/login.php');
 	}
 ?>

@@ -58,7 +58,7 @@
     <?php } ?>
         </div>
         <footer>
-		    <?php require_once "../footer.php" ?>
+		    <?php require_once "../CommonFile/footer.php" ?>
 	    </footer>
     </div>
     <?php require "AdminMenu.php" ?>

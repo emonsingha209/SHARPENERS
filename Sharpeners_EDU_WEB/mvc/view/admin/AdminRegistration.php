@@ -89,7 +89,7 @@
 			</fieldset>
 		</form>
 		<footer>
-			<?php require "../footer.php" ?>
+			<?php require "../CommonFile/footer.php" ?>
 		</footer>
 	</div>
 	<?php require "AdminMenu.php" ?>
@@ -98,6 +98,6 @@
 <?php
 	}
 	else {
-		header('location:../login.php');
+		header('location:../CommonFile/login.php');
 	}
 ?>

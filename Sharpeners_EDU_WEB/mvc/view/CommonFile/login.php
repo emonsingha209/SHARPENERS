@@ -1,17 +1,17 @@
 <?php
-require_once "../model/Message.php";
+require_once "../../model/Message.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
 	<title>Sharpeners - Log in or Sign up</title>
-	<link rel="stylesheet" href="../assets/css/StyleSheet.css">
-    <script src="../assets/js/login.js"></script>
+	<link rel="stylesheet" href="../../assets/css/StyleSheet.css">
+    <script src="../../assets/js/login.js"></script>
 </head>
 <body>
     <h1 id="logo">SHARPENERS</h1>
-    <form id="login-form" method="post" action="../controller/loginCheck.php" autocomplete = "off" onsubmit="return Login()" enctype="multipart/form-data" >
+    <form id="login-form" method="post" action="../../controller/loginCheck.php" autocomplete = "off" onsubmit="return Login()" enctype="multipart/form-data" >
         <fieldset>
             <h2 id="login-title">LOGIN</h2>
             <p class = "inc-pass" id = "<?php Condition() ?>"><?php ShowHeadMessage()?></p>
