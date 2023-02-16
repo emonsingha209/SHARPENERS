@@ -129,11 +129,11 @@ if(isset($_COOKIE['status'])){
                 </div>
             </div>
             <footer>
-                <?php require "../CommonFile/footer.php" ?>
+                <?php include "../CommonFile/footer.php" ?>
             </footer>
         </div>
     </div>
-    <?php require_once "AdminMenu.php" ?>
+    <?php include "AdminMenu.php" ?>
 </body>
 </html>
 <?php

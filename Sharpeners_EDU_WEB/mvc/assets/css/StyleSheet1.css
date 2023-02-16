@@ -8,7 +8,6 @@ body
 	font-size:16px;
 	color:#fff
 }
-
 .topnav
 {
 	background-color:#4949a7;
@@ -16,7 +15,7 @@ body
 	top:0;
 	width:100%;
 	display:grid;
-	grid-template-columns:auto auto auto auto auto;
+	grid-template-columns:auto auto auto auto auto auto;
 	justify-content:space-between
 }
 
@@ -86,14 +85,20 @@ body
 	background-color:#3a3a92
 }
 
-.changepass
+.topnav .changepass
 {
 	grid-column:4
 }
 
-.logout
+.topnav .darkmode
 {
-	grid-column:5
+	margin-top: 5px;
+	grid-column: 5;
+}
+
+.topnav .logout
+{
+	grid-column:6
 }
 
 .sidenav
@@ -105,7 +110,7 @@ body
 	height:100vh
 }
 
-.sidenav a:link,a:visited
+.sidenav a:link,a:visited, button
 {
 	background-color:#4949a7;
 	color:#fff;
@@ -113,12 +118,36 @@ body
 	padding:14px 16px;
 	text-decoration:none;
 	font-size:16px;
-	margin:10px
+	border: none;
 }
 
-.sidenav a:hover,a:active
+.sidenav a:link,a:visited
 {
-	background-color:#00356d
+	margin: 1px;
+}
+
+.sidenav button {
+	width:100%;
+	background-color:#3c3ca7;
+}
+
+.sidenav a:hover, .sidenav a:active, .sidenav button:hover, .sidenav button:active
+{
+	background-color:#00356d;
+	cursor: pointer;
+}
+
+.allbtn {
+	margin-top: 10px;
+}
+
+.allbtn .btnNav{
+	margin: 5px;
+}
+.allbtn .btnNav .linkNav {
+	margin-top: 3px;
+	margin-bottom: 15px;
+	display: none;
 }
 
 .container
@@ -343,7 +372,7 @@ input[type="submit"]:active
 {
 	text-align:center;
 	color:#fff;
-	background-color:red;
+	background-color:#ff0000;
 	width:60%;
 	padding:10px;
 	border-radius:2px;
@@ -631,4 +660,70 @@ input[type="submit"]:active
 #no-data-hide
 {
 	display:none
+}
+.AdminRemove
+{
+	color: #000;
+}
+.table
+{
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 60vw;
+	margin: auto;
+}
+.table td, .table th 
+{
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+  
+.table tr:nth-child(even)
+{
+	background-color: #f2f2f2;
+}
+
+.table tr:nth-child(odd)
+{
+	background-color: #fff;
+}
+
+.table td:nth-child(1), .table td:nth-child(4)
+{
+	text-align: center;
+}
+
+.table tr:hover 
+{
+	background-color: #ddd;
+}
+
+.table th {
+	padding: 12px 0px;
+	background-color: #04AA6D;
+	color: #ffffff;
+}
+.table td
+{
+	text-align: left;
+	padding: 5px 20px;
+}
+.AdminRemove a:link
+{
+	background-color: #4949a7;
+	color: #fff;
+	padding: 14px 16px;
+	text-decoration:none;
+	font-size:16px;
+	border-radius: 5px;
+}
+.AdminRemove a:hover
+{
+	background-color: #00356d;
+}
+.AdminRemove img
+{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
 }

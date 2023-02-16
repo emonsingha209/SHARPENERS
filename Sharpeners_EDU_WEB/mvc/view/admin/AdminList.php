@@ -16,6 +16,7 @@
 <body>
     <div class="container">
         <h1 id="title">Admins Of SHARPENERS</h1>
+        <h1 id="<?php if(mysqli_num_rows($result) == 0) { echo "no-data-show";} else { echo "no-data-hide";} ?>">Admin List Is Empty</h1>
         <div class="card-box">
             <?php while($row = mysqli_fetch_assoc($result)) { ?>
             <div class="card">
@@ -27,10 +28,10 @@
     <?php } ?>
         </div>
         <footer>
-		    <?php require_once "../CommonFile/footer.php" ?>
+		    <?php include "../CommonFile/footer.php" ?>
 	    </footer>
     </div>
-    <?php require "AdminMenu.php" ?>
+    <?php include "AdminMenu.php" ?>
 </body>
 </html>
 <?php

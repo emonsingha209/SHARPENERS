@@ -630,6 +630,14 @@ function UniqueEmail()
     xhttp.onreadystatechange = function (){
         if(this.readyState == 4 && this.status == 200){
             emailErr.innerHTML = this.responseText;
+            if(this.responseText == "This email is already registered. Try different email.")
+            {
+                document.getElementById("email-p").style.display = "block";
+            }
+            else
+            {
+                document.getElementById("email-p").style.display = "none";
+            }
         }
     }
 }

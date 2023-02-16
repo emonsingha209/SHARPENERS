@@ -85,4 +85,18 @@
 			return false;
 		}
 	}
+	function AdminRemove($Email)
+	{
+		$conn = getConnection();
+		$sql = "DELETE from admin WHERE Email = '{$Email}'";
+		$result = mysqli_query($conn, $sql);
+		if($result === true)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 ?>

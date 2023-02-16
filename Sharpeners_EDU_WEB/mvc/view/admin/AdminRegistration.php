@@ -89,10 +89,10 @@
 			</fieldset>
 		</form>
 		<footer>
-			<?php require "../CommonFile/footer.php" ?>
+			<?php include "../CommonFile/footer.php" ?>
 		</footer>
 	</div>
-	<?php require "AdminMenu.php" ?>
+	<?php include "AdminMenu.php" ?>
 </body>
 </html>
 <?php
