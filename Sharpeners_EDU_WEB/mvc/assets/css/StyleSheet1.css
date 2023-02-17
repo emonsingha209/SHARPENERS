@@ -105,7 +105,7 @@ body
 {
 	background-color:#032c57;
 	position:fixed;
-	width:15%;
+	width:17%;
 	margin-top:59px;
 	height:100vh
 }
@@ -115,7 +115,7 @@ body
 	background-color:#4949a7;
 	color:#fff;
 	display:block;
-	padding:14px 16px;
+	padding: 14px;
 	text-decoration:none;
 	font-size:16px;
 	border: none;
@@ -137,6 +137,11 @@ body
 	cursor: pointer;
 }
 
+.sidebtnnav
+{
+	text-align: left;
+}
+
 .allbtn {
 	margin-top: 10px;
 }
@@ -153,7 +158,7 @@ body
 .container
 {
 	float:right;
-	width:82%;
+	width:80%;
 	min-height:514px;
 	margin-top:50px;
 	margin-right:20px;
@@ -505,7 +510,11 @@ input[type="submit"]:active
 {
 	border-top:none
 }
-
+.backtolist
+{
+	position: absolute;
+	margin-top: 30px;
+}
 #edit-btn
 {
 	border:none;

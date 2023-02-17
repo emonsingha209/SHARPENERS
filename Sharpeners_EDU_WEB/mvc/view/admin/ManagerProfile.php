@@ -1,9 +1,9 @@
 <?php
-require_once "../../model/adminModel.php";
+require_once "../../model/managerModel.php";
 require_once "../../model/Message.php";
 if(isset($_COOKIE['status'])){
     $email = $_GET['email'];
-    $data = adminData($email);
+    $data = ManagerData($email);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@ if(isset($_COOKIE['status'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> Admin Profile | Sharpeners </title>
+	<title> Manager Profile | Sharpeners </title>
 	<link rel="stylesheet" href="../../assets/css/StyleSheet1.css">
 </head>
 <body>
@@ -55,7 +55,7 @@ if(isset($_COOKIE['status'])){
             </div>
         </div>
         <div class="backtolist">
-            <a href="../../view/admin/AdminList.php" id="back">Back</a>
+            <a href="../../view/admin/ManagerList.php" id="back">Back</a>
         </div>
         <footer>
             <?php include "../CommonFile/footer.php" ?>

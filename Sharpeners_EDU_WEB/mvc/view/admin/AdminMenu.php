@@ -15,7 +15,7 @@
 <body>
 	<div class = "topnav">
 		<div class="logo">
-			<h3><a href="Admin.php" id="logo" >SHARPENERS</a></h3>
+			<h3><a href="AdminOwnProfile.php" id="logo" >SHARPENERS</a></h3>
 		</div>
 		<div class="username">
 			<a href="AdminOwnProfile.php" id="user-name" ><img src="<?php echo $_SESSION['pic'] ?>"><?php echo $_SESSION['user'] ?></a>
@@ -34,7 +34,7 @@
 		<nav>
 			<div class="allbtn">
 				<div class="btnNav">
-					<button onclick="openAdminNav()">Admin</button>
+					<button class="sidebtnnav" onclick="openAdminNav()">Admin Management</button>
 					<div class="linkNav" id="adminLinkNav">
 						<a href="AdminRegistration.php" id="<?php if(isset($addadmin)) { echo "navcc";} ?>" >Add New Admin</a>
 						<a href="AdminList.php" id="<?php if(isset($AdminList)) { echo "navcc";} ?>" >Admin List</a>
@@ -43,19 +43,22 @@
 					</div>
 				</div>
 				<div class="btnNav">
-					<button onclick="openManagerNav()">Manager</button>
+					<button class="sidebtnnav" onclick="openManagerNav()">Manager Management</button>
 					<div class="linkNav" id="managerLinkNav">
 						<a href="ManagerApplicants.php" id="<?php if(isset($ManagerApplicants)) { echo "navcc";} ?>" >Manager Applicants</a>
-						<a href="AdminList.php" id="<?php if(isset($AdminList)) { echo "navcc";} ?>" >Admin List</a>
-						<a href="AdminManageCourse.php" id="<?php if(isset($AdminUpdateReq)) { echo "navcc";} ?>" >Admin Information Update Request</a>
-						<a href="AdminRemove.php" id="<?php if(isset($AdminRemove)) { echo "navcc";} ?>" >Remove Admin</a>
+						<a href="ManagerList.php" id="<?php if(isset($ManagerList)) { echo "navcc";} ?>" >Manager List</a>
+						<a href="AdminManageCourse.php" id="<?php if(isset($AdminUpdateReq)) { echo "navcc";} ?>" >Manager Information Update Request</a>
+						<a href="ManagerRemove.php" id="<?php if(isset($AdminRemove)) { echo "navcc";} ?>" >Remove Manager</a>
 					</div>
 				</div>
 				<div class="btnNav">
-					<button onclick="openAdmin()">Teacher</button>
+					<button class="sidebtnnav" onclick="openAdmin()">Teacher Management</button>
 				</div>
 				<div class="btnNav">
-					<button onclick="openAdmin()">Student</button>
+					<button class="sidebtnnav" onclick="openAdmin()">Student Management</button>
+				</div>
+				<div class="btnNav">
+					<button class="sidebtnnav" onclick="openAdmin()">Branch Information</button>
 				</div>
 			</div>
 		</nav>

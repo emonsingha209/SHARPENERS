@@ -74,8 +74,9 @@
 							'dob' => $row['DateOfBirth'],
 							'bg' => $row['BloodGroup'],
 							'pic' => $row['PictureLocation'],
+							'cv' => $row['CVLocation'],
 							'joindate' => $row['JoinDate'],
-							'usertype' => $row['Usertype'],
+							'usertype' => $row['UserType'],
 							'branch' => $row['Branch'],
 						];
 					return $adata;
