@@ -8,6 +8,7 @@ if(isset($_COOKIE['status'])){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Admin Profile | Sharpeners </title>
 	<link rel="stylesheet" href="../../assets/css/StyleSheet1.css">
@@ -70,7 +71,6 @@ if(isset($_COOKIE['status'])){
                             <fieldset>
                                 <label for="contnumInfo-up">Enter your new contact information here
                                     <label for="contnum-up">Phone Number<input type="text" id="contnum-up" name="contnumup" value="<?php echo $data['contnum'] ?>"></label>
-                                    <label for="email-up">Email<input type="email" id="email-up" name="emailup" value="<?php echo $data['email'] ?>"></label>
                                 </label>
                                 <p class = "err" id="contnum-p"></p>
                                 <input type="submit" value="Update" />

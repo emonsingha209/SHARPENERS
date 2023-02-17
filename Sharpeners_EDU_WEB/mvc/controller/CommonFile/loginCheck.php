@@ -1,6 +1,6 @@
 <?php 
-    require_once "../model/Message.php";
-	require_once "../model/adminModel.php";
+    require_once "../../model/Message.php";
+	require_once "../../model/adminModel.php";
 
 	$email = $_POST['Email'];
 	$password = $_POST['Password'];
@@ -16,13 +16,13 @@
 		$_SESSION['user'] = $adata['name'];
 		$_SESSION['pic'] = $adata['pic'];
 		setcookie('status', 'true', time()+43200, '/');
-		header('location: ../view/admin/AdminList.php');
+		header('location: ../../view/admin/AdminOwnProfile.php');
 	}
     if(!$login)
     {
         $_SESSION['Hmessage'] = "Invalid Email OR Incorrect Password";
 		$_SESSION['message'] = $email;
         $_SESSION['condition'] = true;
-        header('location: ../view/login.php');
+        header('location: ../../view/login.php');
     }
 ?>

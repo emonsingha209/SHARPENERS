@@ -128,7 +128,7 @@ body
 
 .sidenav button {
 	width:100%;
-	background-color:#3c3ca7;
+	background-color: #4949a7;
 }
 
 .sidenav a:hover, .sidenav a:active, .sidenav button:hover, .sidenav button:active
@@ -513,7 +513,7 @@ input[type="submit"]:active
 	float:right;
 	font-size:24px;
 	cursor:pointer;
-	margin-top:-40px
+	margin-top:-50px
 }
 
 #admin-update-form
