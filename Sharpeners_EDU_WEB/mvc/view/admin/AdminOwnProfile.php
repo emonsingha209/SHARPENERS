@@ -128,10 +128,10 @@ if(isset($_COOKIE['status'])){
                     <p><?php echo $data['joindate'] ?></p>
                 </div>
             </div>
-            <footer>
-                <?php include "../CommonFile/footer.php" ?>
-            </footer>
         </div>
+        <footer>
+		    <?php include "../CommonFile/footer.php" ?>
+	    </footer>
     </div>
     <?php include "AdminMenu.php" ?>
 </body>

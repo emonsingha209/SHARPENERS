@@ -14,6 +14,7 @@ body
 	position:fixed;
 	top:0;
 	width:100%;
+	height: 60px;
 	display:grid;
 	grid-template-columns:auto auto auto auto auto auto;
 	justify-content:space-between
@@ -105,9 +106,16 @@ body
 {
 	background-color:#032c57;
 	position:fixed;
-	width:17%;
-	margin-top:59px;
+	width:200px;
+	top: 0;
+	left: 0;
+	margin-top: 60px;
+	overflow-y: auto;
 	height:100vh
+}
+.sidenav::-webkit-scrollbar
+{
+	display: none;
 }
 
 .sidenav a:link,a:visited, button
@@ -144,6 +152,7 @@ body
 
 .allbtn {
 	margin-top: 10px;
+	margin-bottom: 80px;
 }
 
 .allbtn .btnNav{
@@ -157,21 +166,17 @@ body
 
 .container
 {
-	float:right;
-	width:80%;
-	min-height:514px;
-	margin-top:50px;
-	margin-right:20px;
-	padding-bottom:60px;
-	position:relative;
+	margin: 60px 20px 0px 220px;
+	position: relative;
+	min-height:492px;
+	padding-top: 5px;
+	padding-bottom: 60px;
 	text-align:center
 }
 
 .footer
 {
 	position:absolute;
-	left:0;
-	right:0;
 	bottom:0;
 	background-color:#dac0c0;
 	text-align:center;
@@ -447,6 +452,13 @@ input[type="submit"]:active
 	color:#000
 }
 
+.dataset
+{
+	display: grid;
+	grid-template-columns:auto auto;
+	justify-content:space-between
+}
+
 .dataset1,.dataset2
 {
 	margin-top:30px
@@ -454,7 +466,6 @@ input[type="submit"]:active
 
 .dataset1
 {
-	float:left;
 	font-family:Verdana,Geneva,Tahoma,sans-serif;
 	font-size:x-large;
 	margin:50px 100px
@@ -483,7 +494,6 @@ input[type="submit"]:active
 
 .dataset2
 {
-	float:right;
 	font-family:Verdana,Geneva,Tahoma,sans-serif;
 	width:550px;
 	text-align:left
@@ -512,8 +522,7 @@ input[type="submit"]:active
 }
 .backtolist
 {
-	position: absolute;
-	margin-top: 30px;
+	justify-self: start;
 }
 #edit-btn
 {
