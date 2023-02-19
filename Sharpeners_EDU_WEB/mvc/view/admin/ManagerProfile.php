@@ -6,7 +6,7 @@ if(isset($_COOKIE['status'])){
     $data = ManagerData($email);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,6 +67,6 @@ if(isset($_COOKIE['status'])){
 <?php
 }
 else {
-    header('location:../login.php');
+    header('location:../CommonFile/login.php');
 }
 ?>

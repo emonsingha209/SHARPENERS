@@ -34,12 +34,13 @@
 		<nav>
 			<div class="allbtn">
 				<div class="btnNav">
-					<button class="sidebtnnav" onclick="openAdminNav()">Admin Management</button>
+					<button class="sidebtnnav" id="<?php if($_SESSION['usertype'] != "SuperAdmin") { echo "superadminfunction";} ?>" onclick="openAdminNav()">Admin Management</button>
 					<div class="linkNav" id="adminLinkNav">
 						<a href="AdminRegistration.php" id="<?php if(isset($addadmin)) { echo "navcc";} ?>" >Add New Admin</a>
 						<a href="AdminList.php" id="<?php if(isset($AdminList)) { echo "navcc";} ?>" >Admin List</a>
 						<a href="AdminManageCourse.php" id="<?php if(isset($AdminUpdateReq)) { echo "navcc";} ?>" >Admin Information Update Request</a>
 						<a href="AdminRemove.php" id="<?php if(isset($AdminRemove)) { echo "navcc";} ?>" >Remove Admin</a>
+						<a href="AppointSuperAdmin.php" id="<?php if(isset($AdminSuper)) { echo "navcc";} ?>" >Appoint a Super Admin</a>
 					</div>
 				</div>
 				<div class="btnNav">

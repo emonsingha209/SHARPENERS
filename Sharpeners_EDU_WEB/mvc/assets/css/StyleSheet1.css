@@ -3,10 +3,13 @@ body
 	width:100%;
 	height:100vh;
 	margin:0;
-	background-color:#1b1b32;
 	font-family:'Poppins',sans-serif;
 	font-size:16px;
-	color:#fff
+}
+html[theme='dark']
+{
+	background-color: #1b1b32;
+	color: #fff;
 }
 .topnav
 {
@@ -161,6 +164,11 @@ body
 .allbtn .btnNav .linkNav {
 	margin-top: 3px;
 	margin-bottom: 15px;
+	display: none;
+}
+
+#superadminfunction
+{
 	display: none;
 }
 
@@ -455,8 +463,8 @@ input[type="submit"]:active
 .dataset
 {
 	display: grid;
-	grid-template-columns:auto auto;
-	justify-content:space-between
+	grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+	justify-content: space-between
 }
 
 .dataset1,.dataset2
@@ -468,7 +476,7 @@ input[type="submit"]:active
 {
 	font-family:Verdana,Geneva,Tahoma,sans-serif;
 	font-size:x-large;
-	margin:50px 100px
+	
 }
 
 .dataset1 img
@@ -679,7 +687,7 @@ input[type="submit"]:active
 {
 	display:none
 }
-.AdminRemove
+.AdminTable
 {
 	color: #000;
 }
@@ -726,7 +734,7 @@ input[type="submit"]:active
 	text-align: left;
 	padding: 5px 20px;
 }
-.AdminRemove a:link
+.AdminTable a:link
 {
 	background-color: #4949a7;
 	color: #fff;
@@ -735,11 +743,11 @@ input[type="submit"]:active
 	font-size:16px;
 	border-radius: 5px;
 }
-.AdminRemove a:hover
+.AdminTable a:hover
 {
 	background-color: #00356d;
 }
-.AdminRemove img
+.AdminTable img
 {
 	width: 100px;
 	height: 100px;

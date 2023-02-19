@@ -69,6 +69,13 @@
 		$result = mysqli_query($conn, $sql);
 		return $result;
 	}
+	function SuperAdminGetResult()
+	{
+		$conn = getConnection();
+		$sql = "select * from admin WHERE Usertype = 'Admin'";
+		$result = mysqli_query($conn, $sql);
+		return $result;
+	}
     function adminUniqueData($Email)
 	{
 		$conn = getConnection();
@@ -89,6 +96,20 @@
 	{
 		$conn = getConnection();
 		$sql = "DELETE from admin WHERE Email = '{$Email}'";
+		$result = mysqli_query($conn, $sql);
+		if($result === true)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	function AppointSuperAdmin($Email)
+	{
+		$conn = getConnection();
+		$sql = "UPDATE admin SET Usertype = 'SuperAdmin'  WHERE Email = '{$Email}'";
 		$result = mysqli_query($conn, $sql);
 		if($result === true)
 		{
