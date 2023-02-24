@@ -7,6 +7,7 @@ This is the official website for SHARPENERS, a leading institution dedicated to 
 * Online resources for current students, including course materials and assignment submissions
 * Campus events and news updates
 * Admissions information
+* Responsive website. Can be access from any device.
 ## Requirements
 * An internet-connected device, such as a computer, tablet, or smartphone
 * A web browser, such as Google Chrome, Mozilla Firefox, or Safari

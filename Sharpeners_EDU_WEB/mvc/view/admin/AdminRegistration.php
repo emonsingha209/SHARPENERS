@@ -36,12 +36,14 @@
 				</div>				
 				<div class="input-pass">
 					<label id="pass-label">Password<input type="password" id = "password" name="Password" placeholder="Enter Your Password" onkeyup="PassVal()" ></label>
-					<p class = "err" id="password-p"></p>
-					<p class = "err" id="num-p"></p>
-					<p class = "err" id="lowercase-p"></p>
-					<p class = "err" id="uppercase-p"></p>
-					<p class = "err" id="min-p"></p>
-					<p class = "err" id="max-p"></p>
+					<div class="passErr">
+						<p class = "err" id="password-p"></p>
+						<p class = "err" id="num-p"></p>
+						<p class = "err" id="lowercase-p"></p>
+						<p class = "err" id="uppercase-p"></p>
+						<p class = "err" id="min-p"></p>
+						<p class = "err" id="max-p"></p>
+					</div>
 				</div>
 				<div class="input-cpass">
 					<label id="cpass-label">Confirm Password<input type="password" id = "cpassword" name="Confirm_Password" placeholder="Confirm Your Password" onkeyup="CheckPass()" ></label>

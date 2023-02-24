@@ -18,15 +18,11 @@ html[theme='dark']
 	top:0;
 	width:100%;
 	height: 60px;
-	display:grid;
-	grid-template-columns:auto auto auto auto auto auto;
-	justify-content:space-between
+	line-height: 60px;
+	text-align: right;
+	color: #fff;
 }
 
-.topnav div
-{
-	color:#f2f2f2
-}
 
 .topnav img
 {
@@ -34,94 +30,113 @@ html[theme='dark']
 	height:50px;
 	border-radius:50%;
 	position:absolute;
-	margin-top:-15px;
+	margin-top: 5px;
 	margin-left:-60px
 }
 
 #user-name
 {
-	display:block;
-	padding:14px 16px;
-	margin-top:5px;
-	margin-right:20px;
-	font-size:17px;
-	text-align:center;
-	position:relative;
-	font-weight:700
-}
-
-#user-name:hover,#user-name:active
-{
-	background-color:#4949a7
-}
-
-#user-name,#logo,#h-btn,#cpass-btn
-{
-	text-decoration:none;
-	color:#fff
+	position: absolute;
+	left: 0;
+	margin-left: 270px;
 }
 
 #logo
 {
 	margin-left:20px;
+	position: absolute;
+	left: 0;
+	font-size: 1.17em;
+	font-weight: bold;
 	font-family:'Poppins',sans-serif
 }
 
-#logo:hover,#logo:active
+#h-btn,#cpass-btn,#user-name,#logo
 {
-	background-color:#4949a7
+	text-decoration:none;
+	color:#fff
 }
 
-#h-btn,#cpass-btn
+#h-btn,#cpass-btn,#user-name
 {
 	background-color:#4949a7;
-	display:block;
-	padding:14px 16px;
-	margin-top:5px;
-	margin-right:20px;
 	font-size:17px;
-	text-align:center;
-	grid-column:5
+	text-align:right;
 }
-
-#h-btn:hover,#h-btn:active,#cpass-btn:hover,#cpass-btn:active
+#h-btn,#cpass-btn
 {
-	background-color:#3a3a92
+	padding: 14px 16px;
+	margin-right:20px;
 }
-
-.topnav .changepass
+.topnav .icon
 {
-	grid-column:4
+	display: none;
 }
 
-.topnav .darkmode
+#icon
 {
-	margin-top: 5px;
-	grid-column: 5;
+	font-size: 24px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
 }
 
-.topnav .logout
+@media screen and (max-width: 1000px) 
 {
-	grid-column:6
+	.topnav a:not(:first-child)
+	{
+		display: none;
+	}
+	.topnav .icon
+	{
+		display: block;
+	}
+	
 }
 
-.sidenav
+@media screen and (max-width: 1000px) 
+{
+	.topnav.responsive a:not(:first-child)
+	{
+		float: right;
+		display: block;
+		width: 50%;
+		border: 1px solid #1b1b32;
+	}
+	#user-name,#h-btn, #cpass-btn
+	{
+		margin-right: 0px;
+		padding: 0px 16px;
+		overflow-y: hidden;
+	}
+	#user-name, #cpass-btn
+	{
+		border-bottom: none;
+	}
+	#user-name
+	{
+		position: relative;
+		margin-top: 60px;
+	}
+}
+
+.sidenavs .sidenav
 {
 	background-color:#032c57;
 	position:fixed;
 	width:200px;
 	top: 0;
 	left: 0;
-	margin-top: 60px;
 	overflow-y: auto;
-	height:100vh
+	height: 100vh;
 }
-.sidenav::-webkit-scrollbar
+.sidenavs .sidenav::-webkit-scrollbar
 {
 	display: none;
 }
 
-.sidenav a:link,a:visited, button
+.sidenavs .sidenav a:link,a:visited, button
 {
 	background-color:#4949a7;
 	color:#fff;
@@ -132,17 +147,19 @@ html[theme='dark']
 	border: none;
 }
 
-.sidenav a:link,a:visited
+.sidenavs .sidenav a:link,a:visited
 {
-	margin: 1px;
+	margin: 1px 0px 1px 5px;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.sidenav button {
+.sidenavs .sidenav button {
 	width:100%;
 	background-color: #4949a7;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.sidenav a:hover, .sidenav a:active, .sidenav button:hover, .sidenav button:active
+.sidenavs .sidenav a:hover,.sidenavs .sidenav a:active,.sidenavs .sidenav button:hover,.sidenavs .sidenav button:active
 {
 	background-color:#00356d;
 	cursor: pointer;
@@ -153,18 +170,32 @@ html[theme='dark']
 	text-align: left;
 }
 
-.allbtn {
-	margin-top: 10px;
-	margin-bottom: 80px;
+.sidenavs .sidenav .allbtn {
+	margin-top: 70px;
+	margin-bottom: 20px;
 }
 
-.allbtn .btnNav{
+.sidenavs .sidenav .allbtn .btnNav{
 	margin: 5px;
 }
-.allbtn .btnNav .linkNav {
-	margin-top: 3px;
+.sidenavs .sidenav .allbtn .btnNav .linkNav {
+	margin-top: 5px;
 	margin-bottom: 15px;
 	display: none;
+}
+.sideicon
+{
+	display: none;
+}
+#sideicon
+{
+	font-size: 22px;
+	position: fixed;
+	left: 0;
+	top: 60px;
+	background-color: #333;
+	opacity: .5;
+	cursor: pointer;
 }
 
 #superadminfunction
@@ -180,6 +211,38 @@ html[theme='dark']
 	padding-top: 5px;
 	padding-bottom: 60px;
 	text-align:center
+}
+
+@media screen and (max-width: 1000px) 
+{
+	.sidenavs .sidenav
+	{
+		display: none;
+	}
+	.sideicon
+	{
+		display: block;
+	}
+	.container
+	{
+		margin-left: 5px;
+	}
+}
+
+@media screen and (max-width: 1000px) 
+{
+	.sidenavs.responsive .sidenav
+	{
+		margin-left: 50px;
+		display: block;
+		height: fit-content;
+		max-height: 100vh;
+		overflow-y: auto;
+	}
+	.sidenavs.responsive .sidenav .allbtn
+	{
+		margin-bottom: 10px;
+	}
 }
 
 .footer
@@ -205,13 +268,13 @@ fieldset
 	background-color:#2196F3;
 	color:#1c1e21;
 	margin-top:20px;
-	border:1px solid #000;
+	border:1px solid #1b1e21;
 	padding-right:20px
 }
 
 input
 {
-	color:#000;
+	color:#1b1e21;
 	font-family:Arial,Helvetica,sans-serif;
 	font-size:medium
 }
@@ -229,7 +292,7 @@ input,select
 	border:1px solid #1b1bc0
 }
 
-input:hover,select:hover,file:hover
+select:hover,.file:hover
 {
 	cursor:pointer
 }
@@ -298,14 +361,14 @@ input[type="submit"]:active
 	position:absolute;
 	font-family:sans-serif;
 	background-color:#fff;
-	color:#333;
+	color:#1c1e21;
 	font-size:18px;
 	text-align:center;
-	padding:10px;
+	padding:10px 20px;
 	border-radius:10px;
 	box-shadow:5px 5px 20px #000;
 	margin:auto;
-	width:30vw;
+	width: fit-content;
 	top:100px;
 	left:0;
 	right:0
@@ -349,7 +412,10 @@ input[type="submit"]:active
 	margin-top:10px;
 	width:100%;
 	background-color:#f5f501;
-	border-radius:5px
+	color: #1c1e21;
+	border-radius:5px;
+	cursor: pointer;
+	font-weight: lighter;
 }
 
 #open-popup
@@ -389,13 +455,21 @@ input[type="submit"]:active
 .err
 {
 	text-align:center;
-	color:#fff;
-	background-color:#ff0000;
-	width:60%;
-	padding:10px;
-	border-radius:2px;
+	background-color: #f2f2f2;
+	color: #ff0000;
+	width: fit-content;
+	padding: 10px 20px;
+	font-size: 18px;
+	border-radius:5px;
 	display:none;
 	margin:auto
+}
+
+.passErr
+{
+	background-color: #f2f2f2;
+	width: fit-content;
+	margin: auto;
 }
 
 .card-box
@@ -457,19 +531,31 @@ input[type="submit"]:active
 #navcc
 {
 	background-color:#f3f300;
-	color:#000
+	color:#1b1e21
 }
 
 .dataset
 {
 	display: grid;
 	grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
-	justify-content: space-between
+	justify-content: space-between;
 }
 
 .dataset1,.dataset2
 {
-	margin-top:30px
+	margin-top:30px;
+}
+
+@media screen and (max-width: 1000px) 
+{
+	.dataset1,.dataset2
+	{
+		width: 85%;
+	}
+	.dataset2
+	{
+		margin-bottom: 30px;
+	}
 }
 
 .dataset1
@@ -503,8 +589,7 @@ input[type="submit"]:active
 .dataset2
 {
 	font-family:Verdana,Geneva,Tahoma,sans-serif;
-	width:550px;
-	text-align:left
+	text-align:left;
 }
 
 .dataset2 label
@@ -539,7 +624,8 @@ input[type="submit"]:active
 	float:right;
 	font-size:24px;
 	cursor:pointer;
-	margin-top:-50px
+	margin-top:-50px;
+	margin-right: -10px;
 }
 
 #admin-update-form
@@ -687,23 +773,19 @@ input[type="submit"]:active
 {
 	display:none
 }
-.AdminTable
-{
-	color: #000;
-}
 .table
 {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	border-collapse: collapse;
 	width: 60vw;
 	margin: auto;
 }
 .table td, .table th 
 {
-	border: 1px solid #ddd;
+	border: 1px solid #fff;
 	padding: 8px;
 }
-  
+
 .table tr:nth-child(even)
 {
 	background-color: #f2f2f2;
@@ -711,7 +793,7 @@ input[type="submit"]:active
 
 .table tr:nth-child(odd)
 {
-	background-color: #fff;
+	background-color: #e2e2e2;
 }
 
 .table td:nth-child(1), .table td:nth-child(4)
@@ -721,22 +803,22 @@ input[type="submit"]:active
 
 .table tr:hover 
 {
-	background-color: #ddd;
+	background-color: #2196F3;
 }
 
 .table th {
 	padding: 12px 0px;
 	background-color: #04AA6D;
-	color: #ffffff;
 }
 .table td
 {
 	text-align: left;
 	padding: 5px 20px;
+	color: #1b1e21;
 }
 .AdminTable a:link
 {
-	background-color: #4949a7;
+	background-color: #A37C27;
 	color: #fff;
 	padding: 14px 16px;
 	text-decoration:none;
@@ -745,11 +827,11 @@ input[type="submit"]:active
 }
 .AdminTable a:hover
 {
-	background-color: #00356d;
+	background-color: #569958;
 }
 .AdminTable img
 {
 	width: 100px;
 	height: 100px;
-	border-radius: 50%;
+	border: 1px solid #1b1b32;
 }

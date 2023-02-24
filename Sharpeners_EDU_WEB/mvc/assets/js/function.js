@@ -22,3 +22,27 @@ function openManagerNav()
         managernav.style.display = "block";
     }
 }
+function openTopNav()
+{
+    let topnav = document.getElementById("topnav");
+    if (topnav.className === "topnav") 
+    {
+        topnav.className += " responsive";
+    } 
+    else 
+    {
+        topnav.className = "topnav";
+    }
+}
+function openSideNav()
+{
+    let sidenav = document.getElementById("sidenav");
+    if (sidenav.className === "sidenavs") 
+    {
+        sidenav.className += " responsive";
+    } 
+    else 
+    {
+        sidenav.className = "sidenavs";
+    }
+}
