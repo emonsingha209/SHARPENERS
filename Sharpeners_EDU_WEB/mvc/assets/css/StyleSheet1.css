@@ -77,9 +77,12 @@ html[theme='dark']
 {
 	font-size: 24px;
 	position: absolute;
+	width: 60px;
+	height: 60px;
 	top: 0;
-	right: 0;
+	right: 5px;
 	cursor: pointer;
+	transition: color 0.5s ease-in-out;
 }
 
 @media screen and (max-width: 1000px) 
@@ -87,6 +90,8 @@ html[theme='dark']
 	.topnav a:not(:first-child)
 	{
 		display: none;
+		width: 50%;
+		border: 1px solid #1b1b32;
 	}
 	.topnav .icon
 	{
@@ -101,8 +106,27 @@ html[theme='dark']
 	{
 		float: right;
 		display: block;
-		width: 50%;
-		border: 1px solid #1b1b32;
+    	opacity: 0;
+	}
+	.topnav.responsive a:nth-child(2)
+	{
+		animation: slideIntop 0.5s forwards;
+	}
+	.topnav.responsive a:nth-child(3)
+	{
+		animation: slideIntop 0.7s forwards;
+	}
+	.topnav.responsive a:nth-child(4)
+	{
+		animation: slideIntop 0.9s forwards;
+	}
+	.topnav.responsive a:nth-child(5)
+	{
+		animation: slideIntop 1.1s forwards;
+	}
+	.topnav.responsive .icon
+	{
+		color: #b0b0b0;
 	}
 	#user-name,#h-btn, #cpass-btn
 	{
@@ -118,6 +142,20 @@ html[theme='dark']
 	{
 		position: relative;
 		margin-top: 60px;
+	}
+}
+
+@keyframes slideIntop {
+	0% 
+	{
+		transform: translateX(100%);
+	  	opacity: 0;
+	}
+  
+	100%
+	{
+	 	transform: translateX(0%);
+		opacity: 1;
 	}
 }
 
@@ -187,6 +225,10 @@ html[theme='dark']
 {
 	display: none;
 }
+.sidenavs .sideicon
+{
+	opacity: .5;
+}
 #sideicon
 {
 	font-size: 22px;
@@ -194,7 +236,6 @@ html[theme='dark']
 	left: 0;
 	top: 60px;
 	background-color: #333;
-	opacity: .5;
 	cursor: pointer;
 }
 
@@ -218,14 +259,20 @@ html[theme='dark']
 	.sidenavs .sidenav
 	{
 		display: none;
+		margin-left: 50px;
+		height: fit-content;
+		max-height: 0;
+		overflow-y: auto;
+		transition: max-height 0.5s ease-out;
 	}
-	.sideicon
+	.sidenavs .sideicon
 	{
 		display: block;
 	}
 	.container
 	{
 		margin-left: 5px;
+		margin-right: 5px;
 	}
 }
 
@@ -233,15 +280,29 @@ html[theme='dark']
 {
 	.sidenavs.responsive .sidenav
 	{
-		margin-left: 50px;
 		display: block;
-		height: fit-content;
 		max-height: 100vh;
-		overflow-y: auto;
+		animation: slideInSide 1s forwards;
 	}
 	.sidenavs.responsive .sidenav .allbtn
 	{
 		margin-bottom: 10px;
+	}
+	.sidenavs.responsive .sideicon
+	{
+		opacity: 1;
+	}
+}
+
+@keyframes slideInSide {
+	0% 
+	{
+		max-height: 0;
+	}
+  
+	100%
+	{
+		max-height: 100vh;
 	}
 }
 
@@ -258,9 +319,16 @@ html[theme='dark']
 
 form
 {
-	width:40vw;
-	min-width:300px;
+	width:50%;
 	margin:auto
+}
+
+@media screen and (max-width: 700px) 
+{
+	form
+	{
+		width: 100%;
+	}
 }
 
 fieldset
@@ -546,18 +614,6 @@ input[type="submit"]:active
 	margin-top:30px;
 }
 
-@media screen and (max-width: 1000px) 
-{
-	.dataset1,.dataset2
-	{
-		width: 85%;
-	}
-	.dataset2
-	{
-		margin-bottom: 30px;
-	}
-}
-
 .dataset1
 {
 	font-family:Verdana,Geneva,Tahoma,sans-serif;
@@ -612,6 +668,26 @@ input[type="submit"]:active
 .dataset2 .contnum,.basic,.joindate
 {
 	border-top:none
+}
+@media screen and (max-width: 700px) 
+{
+	.dataset1,.dataset2
+	{
+		width: 85%;
+	}
+	.dataset2
+	{
+		margin-bottom: 30px;
+	}
+	.dataset2 p
+	{
+		padding-left:5px 10px
+	}
+	.dataset2 .address,.contnum,.basic,.joindate
+	{
+		border:2px solid #4949a7;
+		padding: 5px
+	}
 }
 .backtolist
 {
@@ -762,9 +838,9 @@ input[type="submit"]:active
 	margin-top:150px;
 	font-size:48px;
 	background-color:#3e8e41;
-	padding:10px;
+	padding:10px 20px;
 	border-radius: 5px;
-	width:60%;
+	width:fit-content;
 	text-align:center;
 	display:block
 }

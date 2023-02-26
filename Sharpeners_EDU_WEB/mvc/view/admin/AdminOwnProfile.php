@@ -133,10 +133,10 @@ if(isset($_COOKIE['status'])){
 		    <?php include "../CommonFile/footer.php" ?>
 	    </footer>
     </div>
-    <?php include "AdminMenu.php" ?>
 </body>
 </html>
 <?php
+include "AdminMenu.php";
 }
 else {
     header('location:../CommonFile/login.php');

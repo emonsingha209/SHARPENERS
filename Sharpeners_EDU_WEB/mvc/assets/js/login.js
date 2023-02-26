@@ -1,3 +1,4 @@
+const errors = document.getElementsByClassName("err");
 function Login()
 {
     let email = document.getElementById('login-email').value;
@@ -7,22 +8,22 @@ function Login()
         if(email == "")
         {
             document.getElementById('login-email-err').innerHTML = "Email field is required";
+            errors[0].style.display = "block";
         }
         if(password == "")
         {
             document.getElementById('login-password-err').innerHTML = "Password field is required";
+            errors[1].style.display = "block";
         }
         return false;
     }
 }
 function Hide()
 {
-    const errors = document.getElementsByClassName("err");
-
     let l = errors.length;
 
     for(let i=0; i<l; i++)
     {
-        errors[i].innerHTML = "";
+        errors[i].style.display = "none";
     }
 }

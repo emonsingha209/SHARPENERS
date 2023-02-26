@@ -34,7 +34,7 @@
 	}
     if(!$login)
     {
-        $_SESSION['Hmessage'] = "Invalid Email OR Incorrect Password";
+        $_SESSION['Hmessage'] = "Invalid email or password";
 		$_SESSION['message'] = $email;
         $_SESSION['condition'] = true;
         header('location: ../../view/CommonFile/login.php');
