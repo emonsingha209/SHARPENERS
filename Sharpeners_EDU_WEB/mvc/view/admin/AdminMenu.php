@@ -1,4 +1,5 @@
 <?php
+	$current_page = basename($_SERVER['PHP_SELF']);
 	require_once "../../model/Message.php";
 	if(isset($_COOKIE['status'])){
 ?>
@@ -17,24 +18,24 @@
 		<div class = "sidenav">
 			<nav>
 				<div class="allbtn">
-					<div class="btnNav">
-						<button class="sidebtnnav" id="<?php if($_SESSION['usertype'] != "SuperAdmin") { echo "superadminfunction";} ?>" onclick="openAdminNav()">Admin Management</button>
+					<div class="btnNav" id="<?php if($_SESSION['usertype'] != "SuperAdmin") { echo "superadminfunction";} ?>">
+						<button class="sidebtnnav" id="<?php if(substr($current_page, 0, 5) == "Admin") { echo "navcc";} ?>" onclick="openAdminNav()">Admin Management</button>
 						<div class="linkNav" id="adminLinkNav">
-							<a href="AdminRegistration.php" id="<?php if(isset($addadmin)) { echo "navcc";} ?>" >Add New Admin</a>
-							<a href="AdminList.php" id="<?php if(isset($AdminList)) { echo "navcc";} ?>" >Admin List</a>
-							<a href="AdminManageCourse.php" id="<?php if(isset($AdminUpdateReq)) { echo "navcc";} ?>" >Admin Information Update Request</a>
-							<a href="AdminRemove.php" id="<?php if(isset($AdminRemove)) { echo "navcc";} ?>" >Remove Admin</a>
-							<a href="AppointSuperAdmin.php" id="<?php if(isset($AdminSuper)) { echo "navcc";} ?>" >Appoint a Super Admin</a>
-							<a href="#" id="<?php if(isset($AdminActivity)) { echo "navcc";} ?>" >Admin's Activities</a>
+							<a href="AdminRegistration.php" id="<?php if($current_page == "AdminRegistration.php") { echo "navcc";} ?>" >Add New Admin</a>
+							<a href="AdminList.php" id="<?php if($current_page == "AdminList.php") { echo "navcc";} ?>" >Admin List</a>
+							<a href="AdminManageCourse.php" id="<?php if($current_page == "AdminManageCourse.php") { echo "navcc";} ?>" >Admin Information Update Request</a>
+							<a href="AdminRemove.php" id="<?php if($current_page == "AdminRemove.php") { echo "navcc";} ?>" >Remove Admin</a>
+							<a href="AdminAppointSuperAdmin.php" id="<?php if($current_page == "AdminAppointSuperAdmin.php") { echo "navcc";} ?>" >Appoint a Super Admin</a>
+							<a href="AdminActivities.php" id="<?php if($current_page == "AdminActivities.php") { echo "navcc";} ?>" >Admin's Activities</a>
 						</div>
 					</div>
 					<div class="btnNav">
-						<button class="sidebtnnav" onclick="openManagerNav()">Manager Management</button>
+						<button class="sidebtnnav" id="<?php if(substr($current_page, 0, 7) == "Manager") { echo "navcc";} ?>" onclick="openManagerNav()">Manager Management</button>
 						<div class="linkNav" id="managerLinkNav">
-							<a href="ManagerApplicants.php" id="<?php if(isset($ManagerApplicants)) { echo "navcc";} ?>" >Manager Applicants</a>
-							<a href="ManagerList.php" id="<?php if(isset($ManagerList)) { echo "navcc";} ?>" >Manager List</a>
-							<a href="AdminManageCourse.php" id="<?php if(isset($AdminUpdateReq)) { echo "navcc";} ?>" >Manager Information Update Request</a>
-							<a href="ManagerRemove.php" id="<?php if(isset($AdminRemove)) { echo "navcc";} ?>" >Remove Manager</a>
+							<a href="ManagerApplicants.php" id="<?php if($current_page == "ManagerApplicants.php") { echo "navcc";} ?>" >Manager Applicants</a>
+							<a href="ManagerList.php" id="<?php if($current_page == "ManagerList.php") { echo "navcc";} ?>" >Manager List</a>
+							<a href="AdminManageCourse.php" id="<?php if($current_page == "AdminManageCourse.php") { echo "navcc";} ?>" >Manager Information Update Request</a>
+							<a href="ManagerRemove.php" id="<?php if($current_page == "ManagerRemove.php") { echo "navcc";} ?>" >Remove Manager</a>
 						</div>
 					</div>
 					<div class="btnNav">
@@ -54,8 +55,8 @@
 		</div>
 	</div>
 	<div class = "topnav" id="topnav">
-		<a href="AdminOwnProfile.php" id="logo" >SHARPENERS</a>
-		<a href="AdminOwnProfile.php" class="username" id="user-name" ><img src="<?php echo $_SESSION['pic'] ?>"><?php echo $_SESSION['user'] ?></a>
+		<a href="OwnProfileAdmin.php" id="logo" >SHARPENERS</a>
+		<a href="OwnProfileAdmin.php" class="username" id="user-name" ><img src="<?php echo $_SESSION['pic'] ?>"><?php echo $_SESSION['user'] ?></a>
 		<a href="changepass.php" class="right" id="cpass-btn">Change Password</a>
 		<a href="changepass.php" class="right" id="cpass-btn">Message</a>
 		<a href="../../controller/CommonFile/LogOut.php" class="right" id="h-btn">Log Out</a>

@@ -1,5 +1,4 @@
 <?php
-    $AdminSuper = true;
     require_once "../../model/adminModel.php";
     require_once "../../model/Message.php";
     if(isset($_COOKIE['status'])){
@@ -31,7 +30,7 @@
                     <td><img src="<?php echo $row['PictureLocation'] ?>" alt="user-pic"></td>
                     <td><?php echo $row['Name'] ?></td>
                     <td><?php echo $row['Email'] ?></td>
-                    <td><a href="../../controller/admin/SuperAdminAppointCheck.php?email=<?php echo $row['Email'] ?>">Appoint</a></td>
+                    <td><a href="../../controller/admin/SuperAdminAppointCheck.php?email=<?php echo $row['Email'] ?>">Promote</a></td>
                 </tr>
                 <?php } ?>
             </table>

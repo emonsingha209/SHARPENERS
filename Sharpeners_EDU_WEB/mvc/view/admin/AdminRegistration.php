@@ -1,5 +1,4 @@
 <?php
-	$addadmin = true;
 	require_once "../../model/Message.php";
 	if(isset($_COOKIE['status'])){
 ?>

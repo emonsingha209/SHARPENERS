@@ -53,10 +53,10 @@ if(isset($_COOKIE['status'])){
                     <p><?php echo $data['joindate'] ?></p>
                 </div>
             </div>
-            <div class="backtolist">
+        </div>
+        <div class="backtolist">
                 <a href="../../view/admin/AdminList.php" id="back">Back</a>
             </div>
-        </div>
         <footer>
             <?php include "../CommonFile/footer.php" ?>
         </footer>

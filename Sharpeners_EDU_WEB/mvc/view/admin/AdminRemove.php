@@ -1,5 +1,4 @@
 <?php
-    $AdminRemove = true;
     require_once "../../model/adminModel.php";
     require_once "../../model/Message.php";
     if(isset($_COOKIE['status'])){

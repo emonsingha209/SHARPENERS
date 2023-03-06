@@ -1,5 +1,4 @@
 <?php
-    $ManagerApplicants = true;
     require_once "../../model/ApplicantsManagerModel.php";
     require_once "../../model/Message.php";
     if(isset($_COOKIE['status'])){
