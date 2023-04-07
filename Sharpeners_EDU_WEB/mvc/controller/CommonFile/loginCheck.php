@@ -18,7 +18,7 @@
 		$_SESSION['pic'] = $adata['pic'];
 		$_SESSION['usertype'] = $adata['usertype'];
 		setcookie('status', 'true', time()+43200, '/');
-		header('location: ../../view/admin/AdminOwnProfile.php');
+		header('location: ../../view/admin/OwnProfileAdmin.php');
 	}
 	if(adminLogin($email, $usertypeSuperAdmin, $password))
 	{
@@ -30,7 +30,7 @@
 		$_SESSION['pic'] = $adata['pic'];
 		$_SESSION['usertype'] = $adata['usertype'];
 		setcookie('status', 'true', time()+43200, '/');
-		header('location: ../../view/admin/AdminOwnProfile.php');
+		header('location: ../../view/admin/OwnProfileAdmin.php');
 	}
     if(!$login)
     {

@@ -10,16 +10,12 @@ body{
 #logo
 {
     margin: auto;
-    margin-top: 80px;
-    margin-bottom: -20px;
+    margin-top: 120px;
+    margin-bottom: -30px;
     text-align: center;
-    font-family:'Poppins',sans-serif;
-    color: #f3f300;
-}
-#login-title{
-    text-align: center;
-    font-family: Tahoma;
-    color: #1b1b32;
+    color: #fff;
+    font-style: italic;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .option a:link, a:visited {

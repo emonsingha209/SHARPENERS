@@ -15,7 +15,6 @@ require_once "../../model/Message.php";
     <h1 id="logo">SHARPENERS</h1>
     <form id="login-form" method="post" action="../../controller/CommonFile/loginCheck.php" autocomplete = "off" onsubmit="return Login()" enctype="multipart/form-data" >
         <fieldset>
-            <h2 id="login-title">LOGIN</h2>
             <p class = "inc-pass" id = "<?php Condition() ?>"><?php ShowHeadMessage()?></p>
             <label id="email-label">Email<input type="email" id = "login-email" name="Email" placeholder="you@example.com" value="<?php ShowMessage() ?>" onclick="Hide()" ></label>
             <p class = "err" id="login-email-err"></p>

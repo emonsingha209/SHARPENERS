@@ -48,7 +48,8 @@ html[theme='dark']
 	left: 0;
 	font-size: 1.17em;
 	font-weight: bold;
-	font-family:'Poppins',sans-serif
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-style: italic;
 }
 
 #h-btn,#cpass-btn,#user-name,#logo
@@ -80,7 +81,7 @@ html[theme='dark']
 	width: 60px;
 	height: 60px;
 	top: 0;
-	right: 5px;
+	right: 0;
 	cursor: pointer;
 	transition: color 0.5s ease-in-out;
 }
@@ -680,7 +681,6 @@ input[type="submit"]:active
 	}
 	.dataset2 .address,.contnum,.basic,.joindate
 	{
-		border:2px solid #4949a7;
 		padding: 5px
 	}
 }
