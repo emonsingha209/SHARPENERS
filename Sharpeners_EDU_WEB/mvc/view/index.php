@@ -1,1 +1,3 @@
-<?php header('location: CommonFile/login.php') ?>
+<?php 
+    header('location: CommonFile/login.php') 
+?>

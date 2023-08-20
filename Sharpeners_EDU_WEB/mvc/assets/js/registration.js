@@ -233,7 +233,7 @@ class Admin extends JobHolder
         return this.err;
     }
 }
-class Manager extends JobHolder
+class Teacher extends JobHolder
 {
     constructor(name, email, address, division, postalcode, contnum, gender, bg, pic, picValue, dob, cv, cvValue, post)
     {
@@ -397,7 +397,7 @@ function AdminReg() {
     }
 }
 
-function ManagerReg() {
+function TeacherReg() {
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;
     let address = document.getElementById('address').value;
@@ -416,7 +416,7 @@ function ManagerReg() {
     let pic = document.getElementById('pic').value;
     let picValue = document.getElementById('pic').files[0];
     let post = false;
-    if(document.getElementById('post-manager').checked || document.getElementById('post-assist-manager').checked)
+    if(document.getElementById('post-teacher').checked || document.getElementById('post-assist-teacher').checked)
     {
         post = true;
     }
@@ -442,68 +442,68 @@ function ManagerReg() {
         hide[i].addEventListener("change", Hide);
     }
 
-    let manager = new Manager(name, email, address, division, postalcode, contnum, gender, bg, pic, picValue, dob, cv, cvValue, post);
+    let teacher = new Teacher(name, email, address, division, postalcode, contnum, gender, bg, pic, picValue, dob, cv, cvValue, post);
 
     let err = 100;
 
-    if(!manager.nameValidation())
+    if(!teacher.nameValidation())
     {
-        nameErr.innerHTML = manager.Error();
+        nameErr.innerHTML = teacher.Error();
         err = 0;
     }
-    if(!manager.emailValidation())
+    if(!teacher.emailValidation())
     {
-        emailErr.innerHTML = manager.Error();
+        emailErr.innerHTML = teacher.Error();
         err = 1;
     }
-    if(!manager.addressValidation())
+    if(!teacher.addressValidation())
     {
-        addressErr.innerHTML = manager.Error();
+        addressErr.innerHTML = teacher.Error();
         err = 2;
     }
-    if(!manager.divisionValidation())
+    if(!teacher.divisionValidation())
     {
-        divisionErr.innerHTML = manager.Error();
+        divisionErr.innerHTML = teacher.Error();
         err = 3;
     }
-    if(!manager.postalcodeValidation())
+    if(!teacher.postalcodeValidation())
     {
-        postalErr.innerHTML = manager.Error();
+        postalErr.innerHTML = teacher.Error();
         err = 4;
     }
-    if(!manager.contnumValidation())
+    if(!teacher.contnumValidation())
     {
-        contnumErr.innerHTML = manager.Error();
+        contnumErr.innerHTML = teacher.Error();
         err = 5;
     }
-    if(!manager.genderValidation())
+    if(!teacher.genderValidation())
     {
-        genderErr.innerHTML = manager.Error();
+        genderErr.innerHTML = teacher.Error();
         err = 6;
     }
-    if(!manager.dobValidation())
+    if(!teacher.dobValidation())
     {
-        dobErr.innerHTML = manager.Error();
+        dobErr.innerHTML = teacher.Error();
         err = 7;
     }
-    if(!manager.bgValidation())
+    if(!teacher.bgValidation())
     {
-        bgErr.innerHTML = manager.Error();
+        bgErr.innerHTML = teacher.Error();
         err = 8;
     }
-    if(!manager.cvValidation())
+    if(!teacher.cvValidation())
     {
-        cvErr.innerHTML = manager.Error();
+        cvErr.innerHTML = teacher.Error();
         err = 9;
     }
-    if(!manager.picValidation())
+    if(!teacher.picValidation())
     {
-        picErr.innerHTML = manager.Error();
+        picErr.innerHTML = teacher.Error();
         err = 10;
     }
-    if(!manager.postValidation())
+    if(!teacher.postValidation())
     {
-        postErr.innerHTML = manager.Error();
+        postErr.innerHTML = teacher.Error();
         err = 11;
     }
     if(err >= 0 && err < 12)

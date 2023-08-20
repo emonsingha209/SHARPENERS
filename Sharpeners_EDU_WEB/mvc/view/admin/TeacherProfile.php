@@ -1,9 +1,9 @@
 <?php
-require_once "../../model/adminModel.php";
+require_once "../../model/teacherModel.php";
 require_once "../../model/Message.php";
 if (isset($_COOKIE['status'])) {
     $email = $_GET['email'];
-    $data = adminData($email);
+    $data = TeacherData($email);
 ?>
     <!DOCTYPE html>
     <html lang="en" theme="dark">
@@ -12,7 +12,7 @@ if (isset($_COOKIE['status'])) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> <?php echo $data['name'] ?> | Sharpeners </title>
+        <title> Teacher Profile | Sharpeners </title>
         <link rel="stylesheet" href="../../assets/css/StyleSheet1.css">
     </head>
 
@@ -55,9 +55,9 @@ if (isset($_COOKIE['status'])) {
                         <p><?php echo $data['joindate'] ?></p>
                     </div>
                 </div>
-            </div>
-            <div class="backtolist">
-                <a href="../../view/admin/AdminList.php" id="back">Back</a>
+                <div class="backtolist">
+                    <a href="../../view/admin/TeacherList.php" id="back">Back</a>
+                </div>
             </div>
             <footer>
                 <?php include "../CommonFile/footer.php" ?>

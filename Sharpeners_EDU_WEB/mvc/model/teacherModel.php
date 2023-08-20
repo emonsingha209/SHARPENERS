@@ -1,10 +1,10 @@
 <?php
     require_once "db.php";
 
-	function managerLogin($Email, $usertype, $Password)
+	function teacherLogin($Email, $usertype, $Password)
 	{
 		$conn = getConnection();
-		$sql = "select * from manager where Email='{$Email}' and Usertype= '{$usertype}' and Password='{$Password}'";
+		$sql = "select * from teacher where Email='{$Email}' and Usertype= '{$usertype}' and Password='{$Password}'";
 		$result = mysqli_query($conn, $sql);
 		$count = mysqli_num_rows($result);
 
@@ -17,10 +17,10 @@
             return false;
         }
 	}
-	function ManagerReg($Name, $Email, $Address, $Division, $PostalCode, $ContactNumber, $Gender, $DateOfBirth, $BloodGroup, $Cv, $Pic, $Post, $Password, $joiningdate)
+	function TeacherReg($Name, $Email, $Address, $Division, $PostalCode, $ContactNumber, $Gender, $DateOfBirth, $BloodGroup, $Cv, $Pic, $Post, $Password, $joiningdate)
 	{
 		$conn = getConnection();
-		$sql = "INSERT into manager(Name, Usertype, Email, Address, Division, PostalCode, ContactNumber, Gender, DateOfBirth, BloodGroup, CVLocation, PictureLocation, Password, JoinDate) VALUES ('{$Name}', '{$Post}', '{$Email}', '{$Address}', '{$Division}', '{$PostalCode}', '{$ContactNumber}', '{$Gender}', '{$DateOfBirth}', '{$BloodGroup}', '{$Cv}', '{$Pic}', '{$Password}', '{$joiningdate}')";
+		$sql = "INSERT into teacher(Name, Usertype, Email, Address, Division, PostalCode, ContactNumber, Gender, DateOfBirth, BloodGroup, CVLocation, PictureLocation, Password, JoinDate) VALUES ('{$Name}', '{$Post}', '{$Email}', '{$Address}', '{$Division}', '{$PostalCode}', '{$ContactNumber}', '{$Gender}', '{$DateOfBirth}', '{$BloodGroup}', '{$Cv}', '{$Pic}', '{$Password}', '{$joiningdate}')";
 		$result = mysqli_query($conn, $sql);
 		if($result === true)
 		{
@@ -31,10 +31,10 @@
 			return false;
 		}
 	}
-	function managerUniqueData($Email)
+	function teacherUniqueData($Email)
 	{
 		$conn = getConnection();
-		$sql = "select * from manager where Email='{$Email}'";
+		$sql = "select * from teacher where Email='{$Email}'";
 		$result = mysqli_query($conn, $sql);
 		$count = mysqli_num_rows($result);
 
@@ -47,17 +47,17 @@
 			return false;
 		}
 	}
-	function managerGetResult()
+	function teacherGetResult()
 	{
 		$conn = getConnection();
-		$sql = "select * from manager";
+		$sql = "select * from teacher";
 		$result = mysqli_query($conn, $sql);
 		return $result;
 	}
-	function managerData($Email)
+	function teacherData($Email)
 	{
 		$conn = getConnection();
-		$sql = "select * from manager where Email='{$Email}'";
+		$sql = "select * from teacher where Email='{$Email}'";
 		$result = mysqli_query($conn, $sql);
 		$count = mysqli_num_rows($result);
 

@@ -1,11 +1,11 @@
 <?php 
 	session_start();
-	require_once "../../model/ApplicantsManagerModel.php";
-	require_once "../../model/ManagerModel.php";
+	require_once "../../model/ApplicantsTeacherModel.php";
+	require_once "../../model/TeacherModel.php";
 
 	$Email = $_GET['email'];
 
-	$data = managerApplicantsGetData($Email);
+	$data = teacherApplicantsGetData($Email);
 
 	$Name = $data['username'];
 	$Address = $data['address'];
@@ -23,7 +23,7 @@
 
 	$error = false;
 
-	$data = managerUniqueData($Email);
+	$data = teacherUniqueData($Email);
 	if($data)
 	{
 		$errmsg = "This user is already exist.";
@@ -32,15 +32,15 @@
 
 	if(!$error)
 	{
-		$status = ManagerReg($Name, $Email, $Address, $Division, $PostalCode, $ContactNumber, $Gender, $DateOfBirth, $BloodGroup, $Cv, $Pic, $Post, $Password, $joiningdate);
+		$status = TeacherReg($Name, $Email, $Address, $Division, $PostalCode, $ContactNumber, $Gender, $DateOfBirth, $BloodGroup, $Cv, $Pic, $Post, $Password, $joiningdate);
 		if($status)
 		{
-			$_SESSION['Hmessage'] = "New Manager Assinged Successfully";
-			$_SESSION['message'] = $Name." is now a manager.";
+			$_SESSION['Hmessage'] = "New Teacher Assinged Successfully";
+			$_SESSION['message'] = $Name." is now a teacher.";
 			$_SESSION['condition'] = true;
 			$_SESSION['OkIcon'] = true;
 			ApplicantsRemove($Email);
-			header('location:../../view/Admin/ManagerApplicants.php');
+			header('location:../../view/Admin/TeacherApplicants.php');
 		}
 		else
 		{
@@ -48,7 +48,7 @@
 			$_SESSION['message'] = "Something is wrong. Unsuccessful Attempt.";
 			$_SESSION['condition'] = true;
 			$_SESSION['WarningIcon'] = true;
-			header('location:../../view/Admin/ManagerApplicants.php');
+			header('location:../../view/Admin/TeacherApplicants.php');
 		}
 	}
 	else
@@ -57,6 +57,6 @@
 		$_SESSION['message'] = $errmsg;
 		$_SESSION['condition'] = true;
 		$_SESSION['WarningIcon'] = true;
-		header('location:../../view/Admin/ManagerApplicants.php');
+		header('location:../../view/Admin/TeacherApplicants.php');
 	}
 ?>

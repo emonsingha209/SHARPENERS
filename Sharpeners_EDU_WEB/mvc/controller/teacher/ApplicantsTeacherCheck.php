@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	require_once "../../model/ApplicantsManagerModel.php";
+	require_once "../../model/ApplicantsTeacherModel.php";
 	
 	$Name = $_POST['name'];
 	$Email = $_POST['email'];
@@ -123,7 +123,7 @@
 			$errmsg = "This pic is not uploadable. Try another one.";
 		}
 		
-		$data = managerApplicantsUniqueData($Email);
+		$data = teacherApplicantsUniqueData($Email);
 		if($data)
 		{
 			$errmsg = "Already Applied. Check your applied status from bottom of this form.";
@@ -132,14 +132,14 @@
 	}
 	if(!$error)
 	{
-		$status = managerApplicants($Name, $Email, $Address, $Division, $PostalCode, $ContactNumber, $Gender, $DateOfBirth, $BloodGroup, $desCv, $desPic, $Post);
+		$status = teacherApplicants($Name, $Email, $Address, $Division, $PostalCode, $ContactNumber, $Gender, $DateOfBirth, $BloodGroup, $desCv, $desPic, $Post);
 		if($status)
 		{
 			$_SESSION['Hmessage'] = "Successfully Applied";
 			$_SESSION['message'] = "Keep checking applied status.";
 			$_SESSION['condition'] = true;
 			$_SESSION['OkIcon'] = true;
-			header('location:../../view/Manager/ManagerRegistration.php');
+			header('location:../../view/Teacher/TeacherRegistration.php');
 		}
 		else
 		{
@@ -147,7 +147,7 @@
 			$_SESSION['message'] = "Something is wrong. Unsuccessful Attempt.";
 			$_SESSION['condition'] = true;
 			$_SESSION['WarningIcon'] = true;
-			header('location:../../view/Manager/ManagerRegistration.php');
+			header('location:../../view/Teacher/TeacherRegistration.php');
 		}
 	}
 	else
@@ -156,6 +156,6 @@
 		$_SESSION['message'] = $errmsg;
 		$_SESSION['condition'] = true;
 		$_SESSION['WarningIcon'] = true;
-		header('location:../../view/Manager/ManagerRegistration.php');
+		header('location:../../view/Teacher/TeacherRegistration.php');
 	} 
 ?>

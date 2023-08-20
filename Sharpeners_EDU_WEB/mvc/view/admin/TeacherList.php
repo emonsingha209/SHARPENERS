@@ -1,8 +1,8 @@
 <?php
-require_once "../../model/adminModel.php";
+require_once "../../model/teacherModel.php";
 require_once "../../model/Message.php";
 if (isset($_COOKIE['status'])) {
-    $result = adminGetResult();
+    $result = teacherGetResult();
 ?>
     <!DOCTYPE html>
     <html lang="en" theme="dark">
@@ -11,25 +11,25 @@ if (isset($_COOKIE['status'])) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Admin List | Sharpeners </title>
+        <title> Teacher List | Sharpeners </title>
         <link rel="stylesheet" href="../../assets/css/StyleSheet1.css">
     </head>
 
     <body>
         <div class="container">
-            <h1 id="title">Admins Of SHARPENERS</h1>
+            <h1 id="title">Teachers Of SHARPENERS</h1>
             <h1 id="<?php if (mysqli_num_rows($result) == 0) {
                         echo "no-data-show";
                     } else {
                         echo "no-data-hide";
-                    } ?>">Admin List Is Empty</h1>
+                    } ?>">Teacher List Is Empty</h1>
             <div class="card-box">
                 <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                     <div class="card">
                         <img src="<?php echo $row['PictureLocation'] ?>" alt="user-pic"><br>
                         <p id="card-name"><?php echo $row['Name'] ?></p> <br>
                         <p><?php echo $row['Email'] ?></p>
-                        <a href="AdminProfile.php?email=<?php echo $row['Email'] ?>" id="details">Details</a>
+                        <a href="TeacherProfile.php?email=<?php echo $row['Email'] ?>" id="details">Details</a>
                     </div>
                 <?php } ?>
             </div>

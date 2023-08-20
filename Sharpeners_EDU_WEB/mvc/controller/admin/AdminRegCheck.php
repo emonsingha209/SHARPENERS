@@ -143,5 +143,5 @@
 		$_SESSION['condition'] = true;
 		$_SESSION['WarningIcon'] = true;
 		header('location:../../view/Admin/AdminRegistration.php');
-	} 
+	}
 ?>

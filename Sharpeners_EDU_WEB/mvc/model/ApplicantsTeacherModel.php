@@ -1,24 +1,24 @@
 <?php
     require_once "db.php";
 
-	function managerApplicants($Name, $Email, $Address, $Division, $PostalCode, $ContactNumber, $Gender, $DateOfBirth, $BloodGroup, $CVLocation, $PictureLocation, $Post)
+	function teacherApplicants($Name, $Email, $Address, $Division, $PostalCode, $ContactNumber, $Gender, $DateOfBirth, $BloodGroup, $CVLocation, $PictureLocation, $Post)
 	{
 		$conn = getConnection();
-		$sql = "INSERT into applicantsmanager(Name, Email, Address, Division, PostalCode, ContactNumber, Gender, DateOfBirth, BloodGroup, CVLocation, PictureLocation, Post) VALUES ('{$Name}', '{$Email}', '{$Address}', '{$Division}', '{$PostalCode}', '{$ContactNumber}', '{$Gender}', '{$DateOfBirth}', '{$BloodGroup}','{$CVLocation}', '{$PictureLocation}', '{$Post}')";
+		$sql = "INSERT into applicantsteacher(Name, Email, Address, Division, PostalCode, ContactNumber, Gender, DateOfBirth, BloodGroup, CVLocation, PictureLocation, Post) VALUES ('{$Name}', '{$Email}', '{$Address}', '{$Division}', '{$PostalCode}', '{$ContactNumber}', '{$Gender}', '{$DateOfBirth}', '{$BloodGroup}','{$CVLocation}', '{$PictureLocation}', '{$Post}')";
 		$result = mysqli_query($conn, $sql);
 		return true;
 	}
-	function managerApplicantsGetResult()
+	function teacherApplicantsGetResult()
 	{
 		$conn = getConnection();
-		$sql = "select * from applicantsmanager";
+		$sql = "select * from applicantsteacher";
 		$result = mysqli_query($conn, $sql);
 		return $result;
 	}
-    function managerApplicantsUniqueData($Email)
+    function teacherApplicantsUniqueData($Email)
 	{
 		$conn = getConnection();
-		$sql = "select * from applicantsmanager where Email='{$Email}'";
+		$sql = "select * from applicantsteacher where Email='{$Email}'";
 		$result = mysqli_query($conn, $sql);
 		$count = mysqli_num_rows($result);
 
@@ -31,10 +31,10 @@
 			return false;
 		}
 	}
-	function managerApplicantsGetData($Email)
+	function teacherApplicantsGetData($Email)
 	{
 		$conn = getConnection();
-		$sql = "select * from applicantsmanager where Email='{$Email}'";
+		$sql = "select * from applicantsteacher where Email='{$Email}'";
 		$result = mysqli_query($conn, $sql);
 		$count = mysqli_num_rows($result);
 
@@ -66,7 +66,7 @@
 	function ApplicantsRemove($Email)
 	{
 		$conn = getConnection();
-		$sql = "DELETE from applicantsmanager WHERE Email = '{$Email}'";
+		$sql = "DELETE from applicantsteacher WHERE Email = '{$Email}'";
 		$result = mysqli_query($conn, $sql);
 		if($result === true)
 		{
@@ -77,4 +77,3 @@
 			return false;
 		}
 	}
-?>
